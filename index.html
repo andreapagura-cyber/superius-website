@@ -18,7 +18,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:h
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,250,249,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-logo{font-weight:800;font-size:1.3rem;color:var(--dark);text-decoration:none;letter-spacing:-0.02em;}
+.nav-logo{font-weight:800;font-size:1.6rem;color:var(--dark);text-decoration:none;letter-spacing:-0.02em;}
 .nav-logo span{color:var(--purple);}
 .nav-links{display:flex;gap:2rem;align-items:center;}
 .nav-links a{font-size:0.875rem;color:var(--text2);text-decoration:none;}
@@ -36,7 +36,7 @@ nav{position:sticky;top:0;z-index:100;padding:1.1rem 2.5rem;display:flex;align-i
 .hero h1 em{font-style:normal;color:var(--purple);}
 .hero p{font-size:1.05rem;color:var(--text2);line-height:1.75;max-width:460px;margin-bottom:2.25rem;}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-.hero-visual{display:flex;justify-content:flex-end;}
+.hero-visual{display:flex;justify-content:center;margin-left:-3rem;}
 .hero-visual img{width:100%;max-width:540px;display:block;}
 
 /* BUTTONS */
@@ -121,6 +121,16 @@ footer{border-top:1px solid var(--border);padding:1.75rem 2.5rem;display:flex;al
 
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}}
 @media(max-width:768px){nav{padding:1rem 1.25rem;}.nav-links{display:none;}.about-inner,.contact-grid{grid-template-columns:1fr;}.stats-grid{grid-template-columns:1fr;}footer{flex-direction:column;align-items:flex-start;}}
+
+/* RATING BADGES */
+.hero-ratings{display:flex;gap:1.25rem;margin-top:2rem;flex-wrap:wrap;}
+.rating-badge{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 1rem;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;backdrop-filter:blur(8px);}
+.rating-badge .stars{color:#F5A623;font-size:0.75rem;letter-spacing:1px;}
+.rating-badge .rating-info{font-size:0.8rem;}
+.rating-badge .rating-score{font-weight:700;color:var(--dark);font-size:0.95rem;}
+.rating-badge .rating-label{color:var(--text3);font-size:0.7rem;display:block;}
+.rating-google-icon{font-size:1.1rem;}
+
 </style>
 </head>
 <body>
@@ -150,6 +160,25 @@ footer{border-top:1px solid var(--border);padding:1.75rem 2.5rem;display:flex;al
       <div class="hero-btns">
         <a href="#products" class="btn-primary" data-en="Our products" data-hr="Naši proizvodi">Our products</a>
         <a href="#careers" class="btn-secondary" data-en="Join our team" data-hr="Pridruži se timu">Join our team</a>
+
+      <div class="hero-ratings">
+        <div class="rating-badge">
+          <span class="rating-google-icon">🅖</span>
+          <div class="rating-info">
+            <span class="rating-score">4.9 <span style="font-weight:400;color:var(--text3)">od 5</span></span>
+            <span class="stars">★★★★★</span>
+            <span class="rating-label">377 Google recenzija</span>
+          </div>
+        </div>
+        <div class="rating-badge">
+          <span class="rating-google-icon">👥</span>
+          <div class="rating-info">
+            <span class="rating-score">9.64 <span style="font-weight:400;color:var(--text3)">od 10</span></span>
+            <span class="stars">★★★★★★★★★½</span>
+            <span class="rating-label">Ocjena korisnika</span>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     <div class="hero-visual">
